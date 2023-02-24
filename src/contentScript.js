@@ -52,7 +52,7 @@
           .replaceAll("{company}", Company_Name);
         textarea.setAttribute("data-default-applied", true); // Mark as default applied
       });
-    }, 500);
+    }, 1000);
   }
 
   const observer = new MutationObserver((mutations) => {
@@ -63,7 +63,7 @@
          
             const textarea = document.querySelector("textarea#form-input--userNote");
             // if(textarea.innerText==='')
-            setTimeout(applyDefaultTemplate(textarea),500)
+            setTimeout(applyDefaultTemplate(textarea),1000)
           
         });
       }
