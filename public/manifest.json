@@ -1,0 +1,54 @@
+{
+  "name": "Angel-Templates",
+  "version": "0.1.0",
+  "description": "Angel-Templates",
+  "options_page": "options.html",
+  "options_ui": {
+    "browser_style": true,
+    "page": "options.html",
+    "open_in_tab": false
+  },
+
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "activeTab",
+    "browsingData",
+    "unlimitedStorage",
+    "cookies",
+    "storage",
+    "declarativeContent"
+  ],
+  "host_permissions": ["https://angel.co/jobs"],
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://angel.co/jobs"],
+      "allFrames" : true,
+      "js": ["contentScript.bundle.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/bookmark.png",
+        "assets/play.png",
+        "assets/delete.png",
+        "assets/save.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_title": "Angel Jobs"
+    
+  },
+  "manifest_version": 3
+}

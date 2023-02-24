@@ -1,0 +1,116 @@
+.user_input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  height: 133px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.user_input label {
+  margin-bottom: 5px;
+}
+
+.user_input textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+}
+
+.all-templates{
+  display: flex;
+  width: 400px;
+  overflow-x: auto;
+}
+.all-templates::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+.all-templates::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the background color of the scrollbar track */
+}
+
+.all-templates::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar thumb */
+}
+.all-templates *{
+font-weight: 600;
+width:12rem;
+white-space: nowrap;
+margin-right: 0.7rem;
+margin-bottom: 1rem;
+}
+.BUTTON{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  background: rgb(114, 105, 104);
+  border-radius: 12px;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-top: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.BUTTON:hover {
+  background-color: rgb(94, 85, 84);
+}
+
+.BUTTON:active {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.template{
+  background-color: blanchedalmond;
+  border-radius: 4px;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+#options-form{
+  text-align: center;
+
+}
+.new-t{
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+  color: cadetblue;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.input-tag {
+  outline: none;
+  padding: 0.5rem;
+  /* margin-inline: auto; */
+  display: flex;
+  color: crimson;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-size: 30px;
+}
+input::placeholder {
+  opacity: 0.5;
+}
+textarea::placeholder {
+  opacity: 0.5;
+}
+
+.template-title {
+  overflow-wrap: anywhere;
+  font-size: 24px;
+  color: crimson;
+  white-space: break-spaces;
+}
+#root{
+  height: 50rem;
+}
