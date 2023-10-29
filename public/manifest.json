@@ -8,7 +8,6 @@
     "page": "options.html",
     "open_in_tab": false
   },
-
   "permissions": [
     "tabs",
     "bookmarks",
@@ -19,14 +18,14 @@
     "storage",
     "declarativeContent"
   ],
-  "host_permissions": ["https://angel.co/jobs"],
+  "host_permissions": ["https://wellfound.com/*"],
   "background": {
     "service_worker": "background.bundle.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://angel.co/jobs"],
-      "allFrames" : true,
+      "matches": ["https://wellfound.com/*"],
+      "allFrames": true,
       "js": ["contentScript.bundle.js"]
     }
   ],
@@ -41,14 +40,16 @@
       "matches": ["<all_urls>"]
     }
   ],
+  "externally_connectable": {
+    "matches": ["https://wellfound.com/*"]
+  },
   "action": {
     "default_icon": {
       "16": "assets/ext-icon.png",
       "24": "assets/ext-icon.png",
       "32": "assets/ext-icon.png"
     },
-    "default_title": "Angel Jobs"
-    
+    "default_title": "Wellfound Jobs"
   },
   "manifest_version": 3
 }
